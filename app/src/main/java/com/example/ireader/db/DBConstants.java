@@ -1,4 +1,4 @@
-package com.example.ireader.util;
+package com.example.ireader.db;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import java.util.Set;
  * Created by ChenR on 2017/9/28.
  */
 
-public class DBConstantUtils {
+public class DBConstants {
 
     public static final Set<String> DB_TABLE_TYPE_VALUES = new HashSet<String>(){
         {

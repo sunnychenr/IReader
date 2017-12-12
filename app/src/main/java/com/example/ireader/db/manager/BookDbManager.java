@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.ireader.util.DBConstantUtils;
+import com.example.ireader.db.DBConstants;
 
 import java.util.Set;
 
@@ -51,7 +51,7 @@ public class BookDbManager extends SQLiteOpenHelper {
     }
 
     private void initTypeDb(SQLiteDatabase db) {
-        Set<String> typeValues = DBConstantUtils.DB_TABLE_TYPE_VALUES;
+        Set<String> typeValues = DBConstants.DB_TABLE_TYPE_VALUES;
 
         for (String value : typeValues) {
             String insertSQL = "insert into " + DB_TABLE_BOOK_TYPE + "(" + DB_TYPE_COLUME_TYPE + ") values ('" +

@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.example.ireader.R;
-import com.example.ireader.util.ConstantUtils;
 import com.example.ireader.util.LogUtil;
 
 /**
