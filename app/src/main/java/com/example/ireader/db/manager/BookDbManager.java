@@ -39,6 +39,8 @@ public class BookDbManager extends SQLiteOpenHelper {
 
     public BookDbManager(Context context) {
         super(context, DB_NAME, null, 1);
+
+        this.db = getReadableDatabase();
     }
 
     @Override
@@ -62,19 +64,19 @@ public class BookDbManager extends SQLiteOpenHelper {
     }
 
     private void createTypeTable(SQLiteDatabase db) {
-        String sql = "create table " + DB_TABLE_BOOK_TYPE + " ('_id' integer primary key autoincrement, '" +
-                DB_TYPE_COLUME_TYPE + "' char(5) not null);";
+        String sql = "CREATE TABLE " + DB_TABLE_BOOK_TYPE + " ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, '" +
+                DB_TYPE_COLUME_TYPE + "' CHAR(5) NOT NULL);";
         db.execSQL(sql);
     }
 
     private void createReadTable(SQLiteDatabase db) {
-        String sql = "create table " + DB_TABLE_BOOK_READ + " ('_id' integer primary key autoincrement, '" +
-                DB_BOOK_READ_COLUMN_PROGRESS + "' integer not null, '" +
-                DB_BOOK_READ_COLUME_LAST_READ_TIME + "' integer not null, '" +
-                DB_BOOK_READ_COLUME_FONT_SIZE + "' integer not null, '" +
-                DB_BOOK_READ_COLUME_FONT + "' char(30), '" +
-                DB_BOOK_READ_COLUMN_PROGRESS_TAG + "' text not null, '" +
-                DB_BOOK_READ_COLUMN_PAGE_BG + "' text not null);";
+        String sql = "CREATE TABLE " + DB_TABLE_BOOK_READ + " ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, '" +
+                DB_BOOK_READ_COLUMN_PROGRESS + "' INTEGER NOT NULL, '" +
+                DB_BOOK_READ_COLUME_LAST_READ_TIME + "' INTEGER NOT NULL, '" +
+                DB_BOOK_READ_COLUME_FONT_SIZE + "' INTEGER NOT NULL, '" +
+                DB_BOOK_READ_COLUME_FONT + "' CHAR(30), '" +
+                DB_BOOK_READ_COLUMN_PROGRESS_TAG + "' TEXT NOT NULL, '" +
+                DB_BOOK_READ_COLUMN_PAGE_BG + "' TEXT NOT NULL);";
         db.execSQL(sql);
     }
 
