@@ -27,13 +27,10 @@ public abstract class BaseActivity extends Activity {
         bindAction();
     }
 
-    protected abstract void bindAction();
-
-    protected abstract void initData();
-
-    protected abstract void initView();
-
     protected abstract int getContentViewId();
+    protected abstract void initView();
+    protected abstract void initData();
+    protected abstract void bindAction();
 
     @SuppressWarnings("unchecked")
     protected <T extends View> T findViewById (Class<T> type, int resId) {
