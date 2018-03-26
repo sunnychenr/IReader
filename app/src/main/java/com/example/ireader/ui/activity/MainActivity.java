@@ -4,7 +4,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 
 import com.example.ireader.R;
-import com.example.ireader.ui.base.BaseActivity;
+import com.example.ireader.ui.BaseActivity;
 import com.example.ireader.util.ToastUtils;
 
 /**

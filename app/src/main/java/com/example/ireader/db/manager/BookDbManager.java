@@ -20,18 +20,19 @@ public class BookDbManager extends SQLiteOpenHelper {
 
     // database column name
     private static final String DB_BASE_BOOK_COLUMN_NAME = "name";
+    private static final String DB_BASE_BOOK_COLUMN_TITLE = "title";
     private static final String DB_BASE_BOOK_COLUMN_AUTHOR = "author";
-    private static final String DB_BASE_BOOK_COLUMN_COVER = "cover";
+    private static final String DB_BASE_BOOK_COLUMN_COVER = "cover"; // 封面???
     private static final String DB_BASE_BOOK_COLUMN_FILE_LENGTH = "file_length";
     private static final String DB_BASE_BOOK_COLUMN_SAVE_PATH = "save_path";
-    private static final String DB_BASE_BOOK_COLUME_ADD_TIME = "add_time";
+    private static final String DB_BASE_BOOK_COLUMN_ADD_TIME = "add_time";
 
     private static final String DB_BOOK_READ_COLUMN_PROGRESS = "progress";
-    private static final String DB_BOOK_READ_COLUME_FONT_SIZE = "font_size";
+    private static final String DB_BOOK_READ_COLUMN_FONT_SIZE = "font_size";
     private static final String DB_BOOK_READ_COLUMN_PAGE_BG = "page_background";
     private static final String DB_BOOK_READ_COLUMN_PROGRESS_TAG = "progress_tag";
-    private static final String DB_BOOK_READ_COLUME_FONT = "font";
-    private static final String DB_BOOK_READ_COLUME_LAST_READ_TIME = "read_time";
+    private static final String DB_BOOK_READ_COLUMN_LAST_READ_TIME = "read_time";
+    private static final String DB_BOOK_READ_COLUMN_FONT = "font";
 
     private static final String DB_TYPE_COLUME_TYPE = "type";
 
@@ -72,9 +73,9 @@ public class BookDbManager extends SQLiteOpenHelper {
     private void createReadTable(SQLiteDatabase db) {
         String sql = "CREATE TABLE " + DB_TABLE_BOOK_READ + " ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, '" +
                 DB_BOOK_READ_COLUMN_PROGRESS + "' INTEGER NOT NULL, '" +
-                DB_BOOK_READ_COLUME_LAST_READ_TIME + "' INTEGER NOT NULL, '" +
-                DB_BOOK_READ_COLUME_FONT_SIZE + "' INTEGER NOT NULL, '" +
-                DB_BOOK_READ_COLUME_FONT + "' CHAR(30), '" +
+                DB_BOOK_READ_COLUMN_LAST_READ_TIME + "' INTEGER NOT NULL, '" +
+                DB_BOOK_READ_COLUMN_FONT_SIZE + "' INTEGER NOT NULL, '" +
+                DB_BOOK_READ_COLUMN_FONT + "' CHAR(30), '" +
                 DB_BOOK_READ_COLUMN_PROGRESS_TAG + "' TEXT NOT NULL, '" +
                 DB_BOOK_READ_COLUMN_PAGE_BG + "' TEXT NOT NULL);";
         db.execSQL(sql);
@@ -83,8 +84,9 @@ public class BookDbManager extends SQLiteOpenHelper {
     private void createBaseTable(SQLiteDatabase db) {
         String sql = "CREATE TABLE " + DB_TABLE_BASE_BOOK + " ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, '" +
                 DB_BASE_BOOK_COLUMN_FILE_LENGTH + "' INTEGER NOT NULL, '" +
-                DB_BASE_BOOK_COLUME_ADD_TIME + "' INTEGER NOT NULL, '" +
+                DB_BASE_BOOK_COLUMN_ADD_TIME + "' INTEGER NOT NULL, '" +
                 DB_BASE_BOOK_COLUMN_NAME + "' TEXT NOT NULL, '" +
+                DB_BASE_BOOK_COLUMN_TITLE + "' TEXT NOT NULL, '" +
                 DB_BASE_BOOK_COLUMN_AUTHOR + "' CHAR(30), '" +
                 DB_BASE_BOOK_COLUMN_COVER + "' VARCHAR(150), '" +
                 DB_BASE_BOOK_COLUMN_SAVE_PATH + "' TEXT NOT NULL, " +

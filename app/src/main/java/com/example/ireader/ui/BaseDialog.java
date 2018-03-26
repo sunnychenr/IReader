@@ -1,4 +1,4 @@
-package com.example.ireader.ui.base;
+package com.example.ireader.ui;
 
 import android.app.Dialog;
 import android.content.Context;

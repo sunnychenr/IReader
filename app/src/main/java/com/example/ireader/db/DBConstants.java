@@ -13,7 +13,7 @@ public class DBConstants {
 
     public static final Set<String> DB_TABLE_TYPE_VALUES = new HashSet<String>(){
         {
-            add("TXT");
+            add("txt");
             add("ePub");
             add("chm");
             add("html");

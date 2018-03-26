@@ -1,13 +1,18 @@
-package com.example.ireader.ui.base;
+package com.example.ireader.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 
 import com.example.ireader.ApplicationEx;
 
+import java.lang.ref.WeakReference;
+
 public abstract class BaseActivity extends Activity {
+    private BaseActivityHandler mHandler = new BaseActivityHandler(this);
+
     protected ApplicationEx appEx;
 
     @Override
@@ -37,5 +42,28 @@ public abstract class BaseActivity extends Activity {
             return (T) target;
         }
         return null;
+    }
+
+    protected void handleMessage (Message msg) {
+
+    }
+
+    protected BaseActivityHandler getActivityHandler () {
+        return mHandler;
+    }
+
+    static class BaseActivityHandler extends Handler {
+        private WeakReference<BaseActivity> mActivity = null;
+
+        public BaseActivityHandler (BaseActivity activity) {
+            mActivity = new WeakReference<BaseActivity>(activity);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            if (mActivity != null && mActivity.get() != null && !mActivity.get().isFinishing()) {
+                mActivity.get().handleMessage(msg);
+            }
+        }
     }
 }
