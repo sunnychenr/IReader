@@ -37,6 +37,6 @@ public class LogUtil {
                 traceElement.getLineNumber()).append(" | ").append(
                 traceElement.getMethodName()).append("]");
         String str = android.os.Process.myPid() + toStringBuffer.toString() + " ";
-        LogUtil.d(AppConstantUtils.APP_LOG_TAG, str + e.getMessage());
+        LogUtil.d(AppConstantUtil.APP_LOG_TAG, str + e.getMessage());
     }
 }

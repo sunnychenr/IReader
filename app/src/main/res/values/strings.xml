@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">IReader</string>
+    <string name="app_name">"IReader"</string>
 
-    <string name="exit_app_hint">Press back again to quit</string>
+    <string name="exit_app_hint">"再次点击即可退出"</string>
 
 </resources>

@@ -8,7 +8,7 @@ import android.widget.Toast;
  * Created by JLang on 2016/11/28.
  */
 
-public class ToastUtils {
+public class ToastUtil {
 
     private static Toast makeText;
 

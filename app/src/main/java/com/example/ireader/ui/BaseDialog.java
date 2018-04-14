@@ -2,17 +2,19 @@ package com.example.ireader.ui;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-import com.example.ireader.util.DeviceUtils;
+import com.example.ireader.util.DeviceUtil;
 
 /**
  * Created by ChenR on 2017/9/28.
  */
 
 public abstract class BaseDialog extends Dialog {
+
     protected View root;
 
     public BaseDialog(Context context) {
@@ -23,7 +25,11 @@ public abstract class BaseDialog extends Dialog {
         super(context, themeResId);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setCanceledOnTouchOutside(true);
+    }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         addContentView();
     }
 
@@ -34,7 +40,7 @@ public abstract class BaseDialog extends Dialog {
         if (params != null) {
             setContentView(root, params);
         } else {
-            int width = DeviceUtils.getScreenWidth() - DeviceUtils.dp2Px(24);
+            int width = DeviceUtil.getScreenWidth() - DeviceUtil.dp2Px(24);
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
             params = new ViewGroup.LayoutParams(width, height);
 

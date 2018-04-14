@@ -12,7 +12,7 @@ import com.example.ireader.ApplicationEx;
  * Created by ChenR on 2017/9/28.
  */
 
-public class DeviceUtils {
+public class DeviceUtil {
 
     public static int dp2Px (int dp) {
         final float scale = ApplicationEx.getInstance().getResources().getDisplayMetrics().density;
@@ -44,8 +44,7 @@ public class DeviceUtils {
     public static int getStatusBarHeight() {
         Resources resources = ApplicationEx.getInstance().getResources();
         int resourceId = resources.getIdentifier("status_bar_height", "dimen", "android");
-        int height = resources.getDimensionPixelSize(resourceId);
-        return height;
+        return resources.getDimensionPixelSize(resourceId);
     }
 
 }

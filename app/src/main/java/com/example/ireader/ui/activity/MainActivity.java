@@ -1,11 +1,12 @@
 package com.example.ireader.ui.activity;
 
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 
 import com.example.ireader.R;
 import com.example.ireader.ui.BaseActivity;
-import com.example.ireader.util.ToastUtils;
+import com.example.ireader.util.ToastUtil;
 
 /**
  * Created by ChenR on 2017/9/28.
@@ -17,6 +18,11 @@ public class MainActivity extends BaseActivity implements DrawerLayout.DrawerLis
     private View mLayoutMenu;
 
     private long mLastBackTime = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     protected void bindAction() {
@@ -68,7 +74,7 @@ public class MainActivity extends BaseActivity implements DrawerLayout.DrawerLis
             super.onBackPressed();
         } else {
             mLastBackTime = now;
-            ToastUtils.showToast(this, getString(R.string.exit_app_hint));
+            ToastUtil.showToast(this, getString(R.string.exit_app_hint));
         }
 
     }
