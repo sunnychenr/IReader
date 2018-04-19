@@ -4,4 +4,7 @@
 
     <string name="exit_app_hint">"再次点击即可退出"</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>

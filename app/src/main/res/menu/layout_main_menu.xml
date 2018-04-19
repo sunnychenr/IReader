@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_group_function"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_item_read"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Read" />
+
+        <item
+            android:id="@+id/menu_item_file"
+            android:icon="@mipmap/ic_launcher"
+            android:title="File" />
+
+    </group>
+
+    <group
+        android:id="@+id/menu_group_other"
+        android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/menu_item_share"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Share" />
+
+        <item
+            android:id="@+id/menu_item_feedback"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Feedback" />
+
+    </group>
+
+</menu>
