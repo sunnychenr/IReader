@@ -15,10 +15,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by ChenR on 2017/9/28.
- */
-
 public class BookDbManager extends SQLiteOpenHelper {
     private static final String TAG = "BookDbManager";
 

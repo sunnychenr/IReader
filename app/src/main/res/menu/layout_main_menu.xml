@@ -19,7 +19,7 @@
 
     <group
         android:id="@+id/menu_group_other"
-        android:checkableBehavior="all">
+        android:checkableBehavior="none">
 
         <item
             android:id="@+id/menu_item_share"

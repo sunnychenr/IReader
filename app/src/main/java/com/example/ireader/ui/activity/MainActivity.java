@@ -83,13 +83,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             case R.id.menu_item_read:
                 break;
             case R.id.menu_item_file:
-                LogUtil.d("chenr", "menu item file click.");
                 break;
             case R.id.menu_item_share:
                 break;
             case R.id.menu_item_feedback:
                 break;
         }
+        mDrawerLayout.closeDrawer(Gravity.START);
         return false;
     }
 }
